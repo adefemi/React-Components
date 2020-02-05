@@ -1,0 +1,54 @@
+@import "../styles/theme";
+
+.image-con-main{
+  width: 100%;
+  height: 600px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 480px) {
+    height: 400px;
+  }
+}
+
+.modalClass{
+  .modal-bubble-fixed{
+    max-width: 1000px !important;
+  }
+}
+
+.navControl{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  .next, .prev{
+
+    transition: .3s ease;
+    svg{
+      color: $primary-color;
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover{
+      cursor: pointer;
+      svg{
+        color: $secondary-color;
+      }
+    }
+
+    &.disabled{
+      cursor: not-allowed;
+      svg{
+        color: darken(white, 50%);
+      }
+    }
+  }
+
+  .next{
+    margin-left: 40px;
+  }
+}
